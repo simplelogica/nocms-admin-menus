@@ -1,13 +1,7 @@
 <% current ||= nil %>
-<li <%= raw "class='#{page_listing_item_classes(page, current).join(' ')}'"%>>
-  <%= link_to page.title, edit_page_path(page)%>
+<li>
+  <%= link_to menu.name, edit_menu_path(menu)%>
   <div class="mo">
-    <%= button_to '', page_path(page), method: :delete, class: "ico-mini-delete", title: t('.destroy') %>
-    <%= button_to page_path(page), method: :put, class: "ico-mini-show-hide", title: (page.draft ? t('.show') : t('.hide')) do %>
-      <% fields_for page do |f| %>
-        <%= f.hidden_field :draft, value: (page.draft ? "0" : "1") %>
-      <% end %>
-    <% end %>
+    <%= button_to '', menu_path(menu), method: :delete, class: "ico-mini-delete", title: t('.destroy') %>
   </div>
-  <%= render partial: 'page_listing_item', collection: page.children, as: 'page', layout: 'page_listing', locals: { current: current } unless page.children.blank? %>
 </li>
