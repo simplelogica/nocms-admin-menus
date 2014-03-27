@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "nocms-admin", git: 'https://github.com/simplelogica/nocms-admin.git', branch: 'master'
+gem "nocms-menus", git: 'https://github.com/simplelogica/nocms-menus.git', branch: 'master'
 
 # Declare your gem's dependencies in menus.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
