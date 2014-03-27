@@ -1,7 +1,7 @@
 module NoCms
   module Admin
     module Menus
-      class ApplicationController < ActionController::Base
+      class ApplicationController < NoCms::Admin::ApplicationController
       end
     end
   end
