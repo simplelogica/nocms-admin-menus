@@ -4,7 +4,7 @@ module NoCms::Admin::Menus
   class MenusController < ApplicationController
 
     before_filter :load_menu_section
-    before_filter :load_menus, only: [:index]
+    before_filter :load_menus, only: [:index, :new]
 
     def new
       @menu = NoCms::Menus::Menu.new
