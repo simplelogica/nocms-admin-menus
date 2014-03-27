@@ -5,7 +5,7 @@ module NoCms::Admin::Menus
 
     before_filter :load_menu_section
     before_filter :load_menus, only: [:index, :new, :edit]
-    before_filter :load_menu, only: [:edit, :update]
+    before_filter :load_menu, only: [:edit, :update, :destroy]
 
     def new
       @menu = NoCms::Menus::Menu.new
@@ -32,6 +32,15 @@ module NoCms::Admin::Menus
         load_menus
         render :new
       end
+    end
+
+    def destroy
+      if @menu.destroy
+        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.destroy.success'), true)
+      else
+        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.destroy.error'), true)
+      end
+      redirect_to action: :index
     end
 
     private
