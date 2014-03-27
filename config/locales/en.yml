@@ -7,7 +7,19 @@ en:
         menus:
           content_fields:
             uid_tooltip: This UID will be used in back code to access to this menu. DO NOT CHANGE IT UNLESS YOU HAVE A GOOD REASON!
+          create:
+            success: "Menu %{title} has been created"
+            error: "Some error was found and menu %{title} couldn't be created"
+          edit:
+            log_messages: "Menu %{title} has been loaded for editing"
+          destroy:
+            success: "Menu %{title} has been deleted"
+            error: "Some error was found and menu %{title} couldn't be deleted"
           menu_listing_item:
             destroy: Remove
           toolbar_right:
             submit: Save
+          update:
+            success: "Menu %{title} has been updated"
+            error: "Some error was found and menu %{title} couldn't be updated"
+
