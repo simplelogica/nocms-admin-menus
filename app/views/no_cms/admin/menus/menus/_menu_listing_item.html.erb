@@ -1,5 +1,5 @@
 <% current ||= nil %>
-<li>
+<li <%= raw "class='#{menu_listing_item_classes(menu, current).join(' ')}'"%>>
   <%= link_to menu.name, edit_menu_path(menu)%>
   <div class="mo">
     <%= button_to '', menu_path(menu), method: :delete, class: "ico-mini-delete", title: t('.destroy') %>
