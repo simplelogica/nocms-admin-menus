@@ -14,21 +14,25 @@ module NoCms::Admin::Menus
     def create
       @menu = NoCms::Menus::Menu.new menu_params
       if @menu.save
-        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.create.success'), true)
+        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.create.success', title: @menu.name), true)
         redirect_to edit_menu_path(@menu)
       else
-        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.create.error'))
+        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.create.error', title: @menu.name))
         load_menus
         render :new
       end
     end
 
+    def edit
+      @nocms_logger.add_message :menus, I18n.t('.no_cms.admin.menus.menus.edit.log_messages', title: @menu.name)
+    end
+
     def update
       if @menu.update_attributes menu_params
-        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.update.success'), true)
+        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.update.success', title: @menu.name), true)
         redirect_to edit_menu_path(@menu)
       else
-        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.update.error'))
+        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.update.error', title: @menu.name))
         load_menus
         render :new
       end
@@ -36,9 +40,9 @@ module NoCms::Admin::Menus
 
     def destroy
       if @menu.destroy
-        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.destroy.success'), true)
+        @nocms_logger.info(I18n.t('.no_cms.admin.menus.menus.destroy.success', title: @menu.name), true)
       else
-        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.destroy.error'), true)
+        @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.destroy.error', title: @menu.name), true)
       end
       redirect_to action: :index
     end
