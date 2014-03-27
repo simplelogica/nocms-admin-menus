@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/simplelogica/nocms-admin.git
-  revision: e4bdb812c9cb35f4e285db3d19da7bcb86178a5a
+  revision: ff8d46dbf16bf0fd16edc90e4c29b1de0273947e
   branch: master
   specs:
     nocms-admin (0.0.1)
@@ -8,11 +8,22 @@ GIT
       rails (~> 4.0, >= 4.0.3)
       sass-rails (~> 4.0, >= 4.0.0)
 
+GIT
+  remote: https://github.com/simplelogica/nocms-menus.git
+  revision: eaf04a1ccca3c7e3b05726ac31f93b96f0e1e2fa
+  branch: master
+  specs:
+    nocms-menus (0.0.1)
+      awesome_nested_set (~> 2.1, >= 2.1.6)
+      globalize (~> 4.0, >= 4.0.0)
+      rails (~> 4.0, >= 4.0.4)
+
 PATH
   remote: .
   specs:
     nocms-admin-menus (0.0.1)
       nocms-admin (~> 0.0, >= 0.0.1)
+      nocms-menus (~> 0.0, >= 0.0.1)
       rails (~> 4.0, >= 4.0.4)
 
 GEM
@@ -44,8 +55,13 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.16)
+    awesome_nested_set (2.1.6)
+      activerecord (>= 3.0.0)
     builder (3.1.4)
     erubis (2.7.0)
+    globalize (4.0.0)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     hike (1.2.3)
     i18n (0.6.9)
     jquery-rails (3.1.0)
@@ -106,4 +122,5 @@ PLATFORMS
 DEPENDENCIES
   nocms-admin!
   nocms-admin-menus!
+  nocms-menus!
   sqlite3
