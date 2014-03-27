@@ -3,3 +3,11 @@ en:
     admin:
       menu_items:
         menus: Menus
+      menus:
+        menus:
+          content_fields:
+            uid_tooltip: This UID will be used in back code to access to this menu. DO NOT CHANGE IT UNLESS YOU HAVE A GOOD REASON!
+          menu_listing_item:
+            destroy: Remove
+          toolbar_right:
+            submit: Save

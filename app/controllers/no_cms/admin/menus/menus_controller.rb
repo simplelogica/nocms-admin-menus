@@ -6,6 +6,12 @@ module NoCms::Admin::Menus
     before_filter :load_menu_section
     before_filter :load_menus, only: [:index]
 
+    def new
+      @menu = NoCms::Menus::Menu.new
+    end
+
+    private
+
     def load_menus
       @menus =  NoCms::Menus::Menu.all
     end
