@@ -1,0 +1,7 @@
+<% content_for :second_menu do %>
+  <%= render partial: 'menu_listing_item', collection: @menus, as: 'menu' %>
+<% end unless @menus.blank? %>
+
+<div class="content">
+  <%= render 'no_cms/admin/shared/log_messages' %>
+</div>
