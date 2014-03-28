@@ -25,6 +25,9 @@ module NoCms::Admin::Menus
 
     def edit
       @nocms_logger.add_message :menus, I18n.t('.no_cms.admin.menus.menus.edit.log_messages', title: @menu.name)
+      NoCms::Admin::Menus.menu_kinds.each do |kind_name, _|
+        @menu.menu_items.build kind: kind_name
+      end
     end
 
     def update
