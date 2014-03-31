@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/simplelogica/nocms-menus.git
-  revision: 94bf3ec847f0632f3acb3afcd9fdfb5e9bfe3cf9
+  revision: 46e0a1e06694fa253b42cf7f08dbbc3250b46270
   branch: master
   specs:
     nocms-menus (0.0.1)
