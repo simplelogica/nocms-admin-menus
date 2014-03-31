@@ -11,6 +11,7 @@ module NoCms
         def menu_item_form_classes menu_item
           classes = []
           classes << 'new' if menu_item.new_record?
+          classes << 'oculto' if menu_item.draft
           classes
         end
 
