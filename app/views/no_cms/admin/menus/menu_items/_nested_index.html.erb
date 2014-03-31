@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="row has-children content_blocks_placeholder">
+    <div class="tool-bar-blocks">
+      <a href="#" class="btn-square ico-collapse-v js-collapse-all-blocks" title="Collapse all blocks"></a>
+      <label><%= t('.title') %></label>
+      <%= link_to t('.new_block'), '#', class: 'new_content_block btn _m0' %>
+    </div>
+
+    <%= f.fields_for :children do |f_children| %>
+      <div class="block row <%= menu_item_form_classes(f_children.object).join(" ")%>" id="<%= menu_item_form_id(f_children.object) %>">
+        <%= render 'no_cms/admin/menus/menu_items/form', f: f_children %>
+      </div>
+    <% end %>
+  </div>
+</div>

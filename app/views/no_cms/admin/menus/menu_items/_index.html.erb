@@ -1,7 +1,9 @@
-<div class="row has-children" id='content_blocks_placeholder'>
-  <label><%= t('.title') %></label>
-
-  <%= link_to t('.new_block'), '#', id: 'new_content_block', class: 'btn _m0' %>
+<div class="row has-children content_blocks_placeholder">
+  <div class="tool-bar-blocks">
+    <a href="#" class="btn-square ico-collapse-v js-collapse-all-blocks" title="Collapse all blocks"></a>
+    <label><%= t('.title') %></label>
+    <%= link_to t('.new_block'), '#', class: 'new_content_block btn _m0' %>
+  </div>
 
   <%= f.fields_for :menu_items do |f_menu_item| %>
     <div class="block row <%= menu_item_form_classes(f_menu_item.object).join(" ")%>" id="<%= menu_item_form_id(f_menu_item.object) %>">
