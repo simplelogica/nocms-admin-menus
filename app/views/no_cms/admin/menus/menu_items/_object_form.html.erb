@@ -1,2 +1,4 @@
-<%= f.select :menuable_id, options %>
-<%= f.hidden_field :menuable_type, value: f.object.menu_kind[:object_class] %>
+<div class='row'>
+  <%= f.select :menuable_id, options %>
+  <%= f.hidden_field :menuable_type, value: f.object.menu_kind[:object_class] %>
+</div>
