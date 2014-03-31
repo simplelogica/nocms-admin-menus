@@ -65,7 +65,13 @@ module NoCms::Admin::Menus
     end
 
     def menu_params
-      menu_params = params.require(:menu).permit(:name, :uid)
+      menu_params = params.require(:menu).permit(
+        :name,
+        :uid,
+      )
+
+      menu_params.merge!(menu_items_attributes: params[:menu][:menu_items_attributes]) unless params[:menu][:menu_items_attributes].blank?
+      menu_params
     end
 
   end
