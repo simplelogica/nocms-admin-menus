@@ -11,6 +11,9 @@ NoCms::Admin::Menus.configure do |config|
   #   },
   #   'agenda' => {
   #     action: 'events#index'
+  #   },
+  #   'fixed_url' => {
+  #     external_url:  true
   #   }
   # }
 

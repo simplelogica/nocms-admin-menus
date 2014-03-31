@@ -29,7 +29,7 @@ module NoCms
           when !menu_item.menu_kind[:action].nil?
             render 'no_cms/admin/menus/menu_items/action_form', menu_item: menu_item, f: form
           else
-            'zxvzxcvzxv'
+            render 'no_cms/admin/menus/menu_items/external_url_form', menu_item: menu_item, f: form
           end
         end
       end
