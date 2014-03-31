@@ -1,4 +1,4 @@
-NoCms::Admin::Menus.configure do |config|
+NoCms::Menus.configure do |config|
 
   # In this section we configure which options will be available in the menus selector.
   # Menu kinds may contain:
@@ -16,5 +16,19 @@ NoCms::Admin::Menus.configure do |config|
   #     external_url:  true
   #   }
   # }
+  config.menu_kinds = {
+    'page' => {
+      object_class: Page,
+    },
+    'product' => {
+      object_class: Product,
+    },
+    'store' => {
+      action: 'products#index'
+    },
+    'fixed_url' => {
+      external_url:  true
+    }
+  }
 
 end
