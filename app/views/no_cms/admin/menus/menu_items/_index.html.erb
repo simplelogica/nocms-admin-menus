@@ -5,7 +5,7 @@
     <%= link_to t('.new_block'), '#', class: 'new_content_block btn _m0' %>
   </div>
 
-  <%= f.fields_for :menu_items do |f_menu_item| %>
+  <%= f.fields_for :menu_items, f.object.menu_items.reject(&:parent).sort_by(&:position) do |f_menu_item| %>
     <div class="block row <%= menu_item_form_classes(f_menu_item.object).join(" ")%>" id="<%= menu_item_form_id(f_menu_item.object) %>">
       <%= render 'no_cms/admin/menus/menu_items/form', f: f_menu_item %>
     </div>
