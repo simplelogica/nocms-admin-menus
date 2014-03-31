@@ -26,6 +26,8 @@ module NoCms
           when !menu_item.menu_kind[:object_class].nil?
             options = menu_item.menu_kind[:object_class].all
             render 'no_cms/admin/menus/menu_items/object_form', menu_item: menu_item, f: form, options: options
+          when !menu_item.menu_kind[:action].nil?
+            render 'no_cms/admin/menus/menu_items/action_form', menu_item: menu_item, f: form
           else
             'zxvzxcvzxv'
           end

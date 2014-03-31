@@ -20,6 +20,9 @@ NoCms::Admin::Menus.configure do |config|
     'product' => {
       object_class: Product,
     },
+    'store' => {
+      action: 'products#index'
+    }
   }
 
 end
