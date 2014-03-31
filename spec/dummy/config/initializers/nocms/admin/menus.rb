@@ -11,6 +11,9 @@ NoCms::Admin::Menus.configure do |config|
   #   },
   #   'agenda' => {
   #     action: 'events#index'
+  #   },
+  #   'fixed_url' => {
+  #     external_url:  true
   #   }
   # }
   config.menu_kinds = {
@@ -22,6 +25,9 @@ NoCms::Admin::Menus.configure do |config|
     },
     'store' => {
       action: 'products#index'
+    },
+    'fixed_url' => {
+      external_url:  true
     }
   }
 
