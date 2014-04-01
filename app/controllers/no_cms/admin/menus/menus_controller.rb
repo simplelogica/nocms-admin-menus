@@ -37,7 +37,7 @@ module NoCms::Admin::Menus
       else
         @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.update.error', title: @menu.name))
         load_menus
-        render :new
+        render :edit
       end
     end
 
