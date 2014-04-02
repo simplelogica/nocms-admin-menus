@@ -1,7 +1,11 @@
 <div class="b-title row">
   <a href="#" class="btn-square ico-collapse-v js-collapse-block" title="Expand /Collapse"></a>
 
+  <p class='title row'>
+    <%= f.object.name %>
+  </p>
   <%= f.select :kind, NoCms::Menus.menu_kinds.map{|name, _| [ I18n.t("no_cms.admin.menus.menus.kinds.#{name}"), name ]}, {}, class: 'block_layout_selector' %>
+
 
   <div class="mo">
     <a href="" class="ico-mini-delete">
