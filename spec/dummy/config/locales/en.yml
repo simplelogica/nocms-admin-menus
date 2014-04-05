@@ -28,3 +28,8 @@ en:
           kinds:
             page: Content page
             product: Product
+            fixed_url: Fixed URL
+            store: Store
+        menu_items:
+          index:
+            new_block: New Block

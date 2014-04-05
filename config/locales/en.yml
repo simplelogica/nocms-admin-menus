@@ -8,6 +8,7 @@ en:
         uid: Uid
       no_cms/menus/menu_item:
         name: Name
+        kind: Kind
   no_cms:
     admin:
       menu_items:
