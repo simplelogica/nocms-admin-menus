@@ -32,4 +32,14 @@ en:
           update:
             success: "Menu %{title} has been updated"
             error: "Some error was found and menu %{title} couldn't be updated"
+        menu_items:
+          index:
+            new_block: Create new block
+            title: Blocks attached to this page
+          form:
+            hide: Hide
+            move_down: Move down
+            move_up: Move up
+            remove: Delete
+
 
