@@ -34,8 +34,11 @@ en:
             error: "Some error was found and menu %{title} couldn't be updated"
         menu_items:
           index:
-            new_block: Create new block
-            title: Blocks attached to this page
+            new_block: Create new menu item
+            title: Menu items attached to this menu
+          nested_index:
+            new_block: Create new child
+            title: Children menu items
           form:
             hide: Hide
             move_down: Move down
