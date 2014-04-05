@@ -20,4 +20,13 @@ gemspec
 
 group :development, :test do
   gem 'faker'
+  gem 'debugger'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'factory_girl'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'poltergeist'
 end
