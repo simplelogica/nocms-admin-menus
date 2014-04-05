@@ -6,6 +6,8 @@ en:
       no_cms/menus/menu:
         name: Name
         uid: Uid
+      no_cms/menus/menu_item:
+        name: Name
   no_cms:
     admin:
       menu_items:
