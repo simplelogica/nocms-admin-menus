@@ -1,0 +1,48 @@
+es:
+  activerecord:
+    models:
+      no_cms/menus/menu: Menú
+    attributes:
+      no_cms/menus/menu:
+        name: Name
+        uid: Uid
+      no_cms/menus/menu_item:
+        name: Nombre
+        kind: Tipo
+  no_cms:
+    admin:
+      menu_items:
+        menus: Menús
+      menus:
+        menus:
+          content_fields:
+            uid_tooltip: Este UID será utilizado en el código para acceder a este menú. NO LO CAMBIES SIN UNA BUENA RAZÓN
+          create:
+            success: "El menú %{title} ha sido creado"
+            error: "Se han encontrado algunos errores y el menú %{title} no ha podido ser creado"
+          edit:
+            log_messages: "Menú %{title} cargado para editar"
+          destroy:
+            success: "El menú %{title} ha sido borrado"
+            error: "Se han encontrado algunos errores y el menú %{title} no ha podido ser borrado"
+          menu_listing_item:
+            destroy: Borrar
+          toolbar_right:
+            submit: Guardar
+          update:
+            success: "El Menú %{title} ha sido actualizado"
+            error: "Se han encontrado algunos errores y el menú %{title} no ha podido ser actualizado"
+        menu_items:
+          index:
+            new_block: Crear un nuevo elemento de menú
+            title: Elementos de menú asociados a este menú
+          nested_index:
+            new_block: Crear un nuevo hijo
+            title: Elementos de menú hijos
+          form:
+            hide: Ocultar
+            move_down: Mover abajo
+            move_up: Mover arriba
+            remove: Borrar
+
+
