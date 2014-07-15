@@ -19,6 +19,10 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <div class="row">
+    <%= f.label :css_class %>
+    <%= f.text_field :css_class %>
+  </div>
 
   <%= render_menu_item_partial f %>
   <%= render 'no_cms/admin/menus/menu_items/nested_index', f: f %>
