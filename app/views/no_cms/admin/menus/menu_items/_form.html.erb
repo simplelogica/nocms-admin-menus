@@ -23,6 +23,10 @@
     <%= f.label :css_class %>
     <%= f.text_field :css_class %>
   </div>
+  <div class="row">
+    <%= f.label :turbolinks %>
+    <%= f.check_box :turbolinks %>
+  </div>
 
   <%= render_menu_item_partial f %>
   <%= render 'no_cms/admin/menus/menu_items/nested_index', f: f %>
