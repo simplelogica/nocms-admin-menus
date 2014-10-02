@@ -28,6 +28,11 @@
     <%= f.check_box :turbolinks %>
   </div>
 
+  <div class="row">
+    <%= f.label :rel %>
+    <%= f.select :rel, NoCms::Menus::MenuItem.rel.options %>
+  </div>
+
   <%= render_menu_item_partial f %>
   <%= render 'no_cms/admin/menus/menu_items/nested_index', f: f %>
 </div>
