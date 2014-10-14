@@ -1,4 +1,4 @@
 <div class='row'>
-  <%= f.collection_select :menuable_id, f.object.menu_kind[:object_class].all, :id, (f.object.menu_kind[:object_name_method] || :name) %>
+  <%= f.collection_select :menuable_id, f.object.menu_kind[:object_class].all, :id, (f.object.menu_kind[:object_name_method] || :name), { include_blank: '' }, class: :select2 %>
   <%= f.hidden_field :menuable_type, value: f.object.menu_kind[:object_class] %>
 </div>
