@@ -25,9 +25,7 @@ module NoCms::Admin::Menus
 
     def edit
       @nocms_logger.add_message :menus, I18n.t('.no_cms.admin.menus.menus.edit.log_messages', title: @menu.name)
-      NoCms::Menus.menu_kinds.each do |kind_name, _|
-        @menu.menu_items.build kind: kind_name
-      end
+      load_menu_item_templates
     end
 
     def update
@@ -37,6 +35,7 @@ module NoCms::Admin::Menus
       else
         @nocms_logger.error(I18n.t('.no_cms.admin.menus.menus.update.error', title: @menu.name))
         load_menus
+        load_menu_item_templates
         render :edit
       end
     end
@@ -51,6 +50,12 @@ module NoCms::Admin::Menus
     end
 
     private
+
+    def load_menu_item_templates
+      NoCms::Menus.menu_kinds.each do |kind_name, _|
+        @menu.menu_items.build kind: kind_name, no_cms_admin_template: true
+      end
+    end
 
     def load_menus
       @menus =  NoCms::Menus::Menu.all
