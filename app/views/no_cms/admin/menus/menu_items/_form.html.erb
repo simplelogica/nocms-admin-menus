@@ -39,4 +39,4 @@
 
 <%= f.hidden_field :position, class: 'position' %>
 <%= f.hidden_field :draft,  class: 'draft', value: f.object.draft ? '1' : '0' %>
-<%= f.hidden_field :_destroy,  class: 'destroy', value: '0' %>
+<%= f.hidden_field :_destroy,  class: 'destroy', value: f.object.no_cms_admin_template ? '1' : '0' %>
