@@ -20,7 +20,7 @@ gemspec
 
 group :development, :test do
   gem 'faker'
-  gem 'debugger'
+  gem 'byebug'
 end
 
 group :test do
